@@ -52,14 +52,14 @@ export async function DepartmentControllerFindOne(
   });
 }
 
-/** 此处后端没有提供注释 DELETE /api/department/${param0} */
-export async function DepartmentControllerRemove(
+/** 删除部门 DELETE /api/department/${param0} */
+export async function deleteDepartment(
   // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
-  params: API.DepartmentControllerRemoveParams,
+  params: API.deleteDepartmentParams,
   options?: { [key: string]: any },
 ) {
   const { id: param0, ...queryParams } = params;
-  return request<any>(`/api/department/${param0}`, {
+  return request<API.ResponseMapDto & { data?: Record<string, any> }>(`/api/department/${param0}`, {
     method: 'DELETE',
     params: { ...queryParams },
     ...(options || {}),

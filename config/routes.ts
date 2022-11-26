@@ -54,7 +54,7 @@ export default [
       },
       {
         path: '/system/department',
-        name: 'sub-page',
+        name: 'department',
         component: './System/Department',
       },
     ],

@@ -39,6 +39,10 @@ declare namespace API {
     name: string;
   };
 
+  type deleteDepartmentParams = {
+    id: number;
+  };
+
   type Department = {
     /** 部门id */
     id: number;
@@ -58,10 +62,6 @@ declare namespace API {
     id: string;
   };
 
-  type DepartmentControllerRemoveParams = {
-    id: string;
-  };
-
   type DepartmentControllerUpdateParams = {
     id: string;
   };
@@ -72,6 +72,8 @@ declare namespace API {
     /** 每一页数量 */
     pageSize?: number;
     name: string;
+    /** 状态：1可用，0禁用 */
+    status: string[];
     /** 开始时间 */
     startDate?: string;
     /** 结束时间 */
@@ -83,7 +85,7 @@ declare namespace API {
     username: string;
     /** 密码 */
     password: string;
-    /** 登录类型 */
+    /** 登录类型：account或者mobile */
     type: string;
     /** 用于校验验证码的key */
     cacheKey: string;

@@ -1,6 +1,6 @@
 export default {
   "menu.system": '系统管理',
-  "menu.department": '部门管理',
+  "menu.system.department": '部门管理',
   'menu.welcome': '欢迎',
   'menu.more-blocks': '更多区块',
   'menu.home': '首页',
