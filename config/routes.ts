@@ -44,6 +44,22 @@ export default [
     ],
   },
   {
+    path: '/system',
+    name: 'system',
+    icon: 'crown',
+    routes: [
+      {
+        path: '/system',
+        redirect: '/admin/sub-page',
+      },
+      {
+        path: '/system/department',
+        name: 'sub-page',
+        component: './System/Department',
+      },
+    ],
+  },
+  {
     path: '/',
     redirect: '/welcome',
   },

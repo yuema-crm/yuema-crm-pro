@@ -40,7 +40,7 @@ const LoginMessage: React.FC<{
 
 const Login: React.FC = () => {
   const [userLoginState, setUserLoginState] = useState<API.LoginResponseDto>({} as API.LoginResponseDto);
-  const [type, setType] = useState<'account' | 'mobile'>('account');
+  const [type, setType] = useState('account');
   const {initialState, setInitialState} = useModel('@@initialState');
   const imgRef = useRef<HTMLImageElement | undefined>()
   const intl = useIntl();
@@ -102,6 +102,7 @@ const Login: React.FC = () => {
     })
   }
 
+  // @ts-ignore
   return (
     <div className={styles.container}>
       <div className={styles.lang} data-lang>
